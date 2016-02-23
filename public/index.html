@@ -1,0 +1,28 @@
+<html ng-app="bcwChats">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatroom for BCW</title>
+</head>
+<body ng-controller="ChatsController">
+    
+    
+    <div>
+        <div class="chat" ng-repeat="chat in chats">
+           {{chat.name}} - {{chat.body}}
+        </div>
+    </div>
+    
+    <div>
+        <input type="text" ng-model="newChat.body"/>
+        <button ng-click="sendChat()">SEND CHAT</button>
+    </div>
+    
+    
+    <script src="assets/plugins/angular/angular.js"></script>
+    
+    <script src="app/app.js"></script>
+    <script src="app/chats-controller.js"></script>
+    
+    
+</body>
+</html>
